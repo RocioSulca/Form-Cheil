@@ -1,12 +1,23 @@
 .container__select {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
     padding-block: 20px;
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr; ;
+        gap: 20px 16px;
+        padding-bottom: 16px;
 
-    @media (min-width: 768px) {
+        & > :last-child {
+            grid-column: 1 / -1; /* El último elemento ocupa todas las columnas */
+        }
+    }
+
+    @media (min-width: 992px) {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px 16px;
         padding-bottom: 16px;
+        & > :last-child {
+            grid-column: auto; /* El último elemento ocupa todas las columnas */
+        }
     }
 }

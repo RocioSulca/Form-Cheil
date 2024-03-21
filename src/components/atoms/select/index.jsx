@@ -28,7 +28,7 @@ const Select = ({
           <div>
             <select
               style={{
-                fontSize: 16,
+                fontSize: 12,
                 paddingVertical: 0,
                 padding: '5px 10px',
                 width: '100%',
