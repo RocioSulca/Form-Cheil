@@ -1,0 +1,12 @@
+.container__select {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    padding-block: 20px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 16px;
+        padding-bottom: 16px;
+    }
+}

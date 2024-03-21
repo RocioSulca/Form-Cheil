@@ -1,0 +1,23 @@
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: rgb(8, 8, 8);
+    outline: none;
+    cursor: pointer;
+}
+
+/* Estilo para el check */
+input[type="checkbox"]:checked::after {
+    content: "\2713";
+    display: flex;
+    width: 10px;
+    height: 10px;
+    align-items: center;
+    color: white;
+    
+}
