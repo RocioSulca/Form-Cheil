@@ -9,8 +9,6 @@ const FileInput = ({
   rules,
   accept,
   label,
-  placeholder,
-  className,
 }) => {
   return (
     <Controller

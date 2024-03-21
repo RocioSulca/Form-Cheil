@@ -1,5 +1,5 @@
 import InputText from '../../atoms/input'
-import {Validation} from '../../../utils/validations'
+import { Validation } from '../../../utils/validations'
 import './index.scss'
 
 const SectionInput = ({ control }) => {
@@ -19,7 +19,7 @@ const SectionInput = ({ control }) => {
         name="name"
         label="Nombres (*)"
         rules={{
-          required: 'El nombre es obligatorio',
+          required: Validation.name,
         }}
       />
       <InputText
@@ -27,7 +27,7 @@ const SectionInput = ({ control }) => {
         name="lastname"
         label="Apellidos (*)"
         rules={{
-          required: 'El apellido es obligatorio',
+          required: Validation.lastname,
         }}
       />
       <InputText
@@ -35,7 +35,7 @@ const SectionInput = ({ control }) => {
         name="dni"
         label="DNI / Carnet de extranjería (*)"
         rules={{
-          required: 'El nro. de documento es obligatorio',
+          required: Validation.dni,
         }}
       />
       <InputText
@@ -43,7 +43,7 @@ const SectionInput = ({ control }) => {
         name="email"
         label="Correo Electrónico (*)"
         rules={{
-          required: 'El correo electrónico es obligatorio',
+          required: Validation.email,
           validate: {
             validEmail: (value) => {
               const isValidEmail = /\S+@\S+\.\S+/.test(value)
@@ -57,7 +57,7 @@ const SectionInput = ({ control }) => {
         name="phone"
         label="Número de contacto (*)"
         rules={{
-          required: 'El nro. de teléfono es obligatorio',
+          required: Validation.phone,
           validate: {
             validNumber: (value) => {
               const isValidNumber = /^[0-9]{7,}$/.test(value);
@@ -69,5 +69,6 @@ const SectionInput = ({ control }) => {
     </section>
   )
 }
+
 
 export default SectionInput

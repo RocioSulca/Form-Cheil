@@ -1,7 +1,6 @@
 
 .tooltip {
     position: relative;
-    /* display: inline-block;  */
     display: flex;
     cursor: pointer;
     background-color: #111111;
@@ -24,8 +23,6 @@
     top: 100%;
     right: 10%;
     margin-left: -60px;
-  
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
   }

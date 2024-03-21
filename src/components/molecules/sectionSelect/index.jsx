@@ -15,7 +15,7 @@ const SectionSelect = ({ control }) => {
     { value: "store1", label: "Tienda 1" },
     { value: "store2", label: "Tienda 2" },
     { value: "store3", label: "Tienda 3" },
-    { value: "store4", label: "Tienda 3" }
+    { value: "store4", label: "Tienda 4" }
 
   ];
 

@@ -21,9 +21,9 @@ const Select = ({
           )}
           <section>
             <select
-            style={{
-              borderColor: fieldState.error ? 'red' : '#111111',
-            }}
+              style={{
+                borderColor: fieldState.error ? 'red' : '#111111',
+              }}
               {...field}
             >
               {placeholder && (

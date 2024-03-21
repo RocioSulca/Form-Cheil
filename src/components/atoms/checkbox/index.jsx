@@ -6,7 +6,6 @@ const Checkbox = ({
   name,
   rules,
   label,
-  className, // Prop para clases CSS personalizadas
 }) => {
   return (
     <Controller

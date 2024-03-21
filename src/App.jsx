@@ -5,7 +5,6 @@ import SectionSelect from './components/molecules/sectionSelect'
 import SectionCheckbox from './components/molecules/sectionCheckbox'
 import ButtonForm from './components/atoms/button'
 
-
 function App() {
 
   const { control, handleSubmit } = useForm()
