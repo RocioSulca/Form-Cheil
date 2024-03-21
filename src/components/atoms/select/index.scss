@@ -1,4 +1,4 @@
-.input__content {
+.select__content {
 
   &--error {
     display: flex;
@@ -14,14 +14,13 @@
   label {
     font-size: 12px;
     font-weight: 600;
-    padding-bottom: 10px;
   }
 
-  input {
-    border-radius: 5px;
-    border-width: 1px;
-    padding: 5px;
-    font-size: 14px;
+  select {
+    font-size: 12px;
+    padding: 5px 10px;
     width: 100%;
+    border-radius: 5px;
   }
+
 }

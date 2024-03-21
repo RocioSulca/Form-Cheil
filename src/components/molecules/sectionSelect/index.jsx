@@ -46,7 +46,7 @@ const SectionSelect = ({ control }) => {
           accept="image/jpeg, image/png, application/pdf, image/bmp, image/tiff"
           label="Adjunta tu boleta de pago (*)"
         />
-        <p style={{ fontSize: 10, fontWeight: 500 }}>*Solo se podrá adjuntar un archivo con peso menor a 10MB en los formatos JPG, PNG, BMP, TIF, PDF.</p>
+        <p>*Solo se podrá adjuntar un archivo con peso menor a 10MB en los formatos JPG, PNG, BMP, TIF, PDF.</p>
       </section>
 
     </section>

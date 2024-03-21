@@ -1,0 +1,11 @@
+.container__checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 40px;
+    }
+  }

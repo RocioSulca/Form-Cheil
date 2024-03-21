@@ -1,4 +1,5 @@
 import { Controller } from "react-hook-form"
+import './index.scss'
 
 const InputText = ({
   control,
@@ -13,49 +14,24 @@ const InputText = ({
       control={control}
       render={({ field, fieldState }) => (
         <>
-          <section>
+          <section className="input__content">
             {label && (
-              <label
-                style={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  paddingBottom: 10
-                }}
-              >{label}</label>
+              <label>{label}</label>
             )}
             <section>
               <input
               type={type}
-                style={{
-                  borderRadius: 5,
-                  borderWidth: 1,
-                  padding: 5,
-                  fontSize: 14,
-                  paddingVertical: 0,
-                  borderColor: fieldState.error ? 'red' : '#111111',
-                  width: '100%'
-                }}
                 placeholder={placeholder}
                 onChange={e => {
                   field.onChange(e.target.value)
                 }}
                 value={field.value}
+                style={{borderColor: fieldState.error ? 'red' : '#111111',}}
               />
             </section>
             {fieldState.error && (
-              <section
-                style={{
-                  display: 'flex',
-                  alignItems: 'flex-start'
-                }}
-              >
-                <p
-                  style={{
-                    color: 'red',
-                    fontSize: 12,
-                  fontWeight: 500,
-                  }}
-                >{fieldState.error.message}</p>
+              <section className="input__content--error">
+                <p>{fieldState.error.message}</p>
               </section>
             )}
           </section>
@@ -68,13 +44,5 @@ const InputText = ({
   )
 }
 
-InputText.prototype = {
-  // control: 
-  // name,
-  // rules,
-  // placeholder,
-  // label,
-  type: 'text'
-}
 
 export default InputText

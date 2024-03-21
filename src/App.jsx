@@ -1,20 +1,18 @@
 import { useForm } from 'react-hook-form'
 import './index.scss'
-import Checkbox from './components/atoms/checkbox'
 import SectionInput from './components/molecules/sectionInput'
 import SectionSelect from './components/molecules/sectionSelect'
+import SectionCheckbox from './components/molecules/sectionCheckbox'
+import ButtonForm from './components/atoms/button'
 
 
 function App() {
 
   const { control, handleSubmit } = useForm()
-  // const [isChecked, setIsChecked] = useState(false);
 
   const onSubmit = (data) => {
     console.log(data)
   }
-
-
 
   return (
     <main className='container'>
@@ -26,35 +24,9 @@ function App() {
         <section className='container__form--body'>
           <SectionInput control={control} />
           <SectionSelect control={control} />
-          <section className='container__form--checkbox'>
-            <Checkbox
-              control={control}
-              label="Acepto la POLÍTICA DE PRIVACIDAD (*)"
-              name="privacy"
-              value="privacy"
-              // onChange={(checked) => setIsChecked(checked)}
-              // checked={isChecked}
-              rules={{ required: "El campo es obligatorio" }}
-            />
-            <Checkbox
-              control={control}
-              label="Acepto los Términos y condiciones (*)"
-              name="terms"
-              value="terms"
-              rules={{ required: "El campo es obligatorio" }}
-            />
-            <Checkbox
-              control={control}
-              label="Deseo recibir información de promociones Samsung"
-              name="promotion"
-              value="promotion"
-            />
-          </section>
-
-          <p style={{ textAlign: 'center', fontSize: 14, fontWeight: 600, paddingBlock: 20 }}>Este sitio esta protegido por reCAPTCHA. Aplican la Política de Privacidad de Google y los Términos del Servicio</p>
-          <section style={{ textAlign: 'center' }}>
-            <input type='submit' value='REGISTRAR' style={{ backgroundColor: '#111111', color: 'white', border: 'none', padding: '10px 70px', borderRadius: 20, fontSize: 12 }} />
-          </section>
+          <SectionCheckbox control={control} />
+          <p className='container__form--paragraph'>Este sitio esta protegido por reCAPTCHA. Aplican la Política de Privacidad de Google y los Términos del Servicio</p>
+          <ButtonForm type='submit' value='REGISTRAR' />
         </section>
       </form>
     </main>

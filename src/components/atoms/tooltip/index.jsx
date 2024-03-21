@@ -1,10 +1,11 @@
+import './index.scss'
 
 const Tooltip = ({ text, children }) => {
 
   return (
-    <div className="tooltip">{children}
+    <section className="tooltip">{children}
       <span className="tooltiptext">{text}</span>
-    </div>
+    </section>
   );
 };
 

@@ -56,9 +56,14 @@ const SectionInput = ({ control }) => {
         control={control}
         name="phone"
         label="Número de contacto (*)"
-        type='number'
         rules={{
           required: 'El nro. de teléfono es obligatorio',
+          validate: {
+            validNumber: (value) => {
+              const isValidNumber = /^[0-9]{7,}$/.test(value);
+              return isValidNumber || 'El número de celular debe tener mínimo 7 dígitos ';
+            }
+          }
         }}
       />
     </section>

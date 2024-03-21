@@ -1,14 +1,22 @@
 .container__select {
     display: grid;
     gap: 10px;
-    padding-block: 20px;
+    padding-block: 5px;
+    padding-bottom: 10px;
+
+    p {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
     @media (min-width: 600px) {
-        grid-template-columns: 1fr 1fr; ;
+        grid-template-columns: 1fr 1fr;
+        ;
         gap: 20px 16px;
         padding-bottom: 16px;
 
-        & > :last-child {
-            grid-column: 1 / -1; /* El último elemento ocupa todas las columnas */
+        &> :last-child {
+            grid-column: 1 / -1;
         }
     }
 
@@ -16,8 +24,9 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 20px 16px;
         padding-bottom: 16px;
-        & > :last-child {
-            grid-column: auto; /* El último elemento ocupa todas las columnas */
+
+        &> :last-child {
+            grid-column: auto;
         }
     }
 }

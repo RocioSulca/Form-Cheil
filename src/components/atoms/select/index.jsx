@@ -1,5 +1,5 @@
 import { Controller } from "react-hook-form";
-
+import './index.scss'
 
 const Select = ({
   control,
@@ -8,34 +8,23 @@ const Select = ({
   options,
   placeholder,
   label,
-  className, // Prop para clases CSS personalizadas
 }) => {
   return (
     <Controller
       control={control}
       render={({ field, fieldState }) => (
-        <div>
+        <section className="select__content">
           {label && (
-            <label
-              style={{
-                fontSize: 12,
-                fontWeight: 600
-              }}
-            >
+            <label>
               {label}
             </label>
           )}
-          <div>
+          <section>
             <select
-              style={{
-                fontSize: 12,
-                paddingVertical: 0,
-                padding: '5px 10px',
-                width: '100%',
-                borderColor: fieldState.error ? 'red' : '#111111',
-                borderRadius: 5,
-              }}
-              {...field} // Spread para pasar props del campo
+            style={{
+              borderColor: fieldState.error ? 'red' : '#111111',
+            }}
+              {...field}
             >
               {placeholder && (
                 <option value="" disabled>
@@ -43,32 +32,20 @@ const Select = ({
                 </option>
               )}
               {options.map((option) => (
-                <option key={option.value} value={option.value} style={{width: '100px', backgroundColor: 'red'}}>
+                <option key={option.value} value={option.value}>
                   {option.label}
                 </option>
               ))}
             </select>
-          </div>
+          </section>
           {fieldState.error && (
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'flex-start',
-              }}
-            >
-              <p
-                style={{
-                  color: 'red',
-                  fontSize: 12,
-                  fontWeight: 500,
-                }}
-              >
+            <section className="select__content--error">
+              <p>
                 {fieldState.error.message}
               </p>
-              {/* Aquí puedes agregar un ícono de error u otro indicador visual */}
-            </div>
+            </section>
           )}
-        </div>
+        </section>
       )}
       name={name}
       defaultValue=""
